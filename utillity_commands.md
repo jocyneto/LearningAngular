@@ -29,3 +29,9 @@ OU
     ng serve
 '''
 3- Ele te dará o localhost de acesso, normalmente: http://localhost:4200/
+
+Extra:
+- Ao executar o projeto ele já abre:
+'''
+    ng serve --open
+'''
