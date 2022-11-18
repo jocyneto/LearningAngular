@@ -35,3 +35,8 @@ Extra:
 '''
     ng serve --open
 '''
+
+# Instalacao Bootstrap:
+npm install --save bootstrap@3
+
+No arquivo angular.json na parte styles colocar esse caminho acima do style.css: "node_modules/bootstrap/dist/css/bootstrap.min.css"
