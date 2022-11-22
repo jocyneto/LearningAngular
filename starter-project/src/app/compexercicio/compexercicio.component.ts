@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./compexercicio.component.css']
 })
 export class CompexercicioComponent {
+  nomeDiretorio   = ``;
+
+  getNomeDiretorio(){
+    console.log(this.nomeDiretorio);    
+  }
+
+  resetNomeDiretorio(){
+    this.nomeDiretorio = ``;
+  }
+
 
 }

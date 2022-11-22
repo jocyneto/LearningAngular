@@ -1,3 +1,34 @@
+<label>Uniderecional</label>
+
+<!-- Forma unidirecional -->
+<input type="text" 
+name="texto" 
+class="form-control"
+(input)="onUpdateServerName($event)"> 
+
+<label>Bidirecional</label>
+<!-- Forma bi direcional: É preciso importar o FormsModule no NgModule no app.module.ts -->
+<input type="text"
+class="form-control"
+[(ngModel)]="nomeServer">
+
+<p>{{ nomeServer }}</p>
+
+<!-- Usa o [] para utilizar as 'property biding' do angular -->
+<!-- Usa o () para utilizar os 'events biding' do angular -->
+<button type="button" class="btn btn-default" 
+[disabled]="!permiteNovoServer"
+(click)="onCreatedServer()">button</button>
+
+<p>{{ statusCreatedServer }}</p>
+<p *ngIf="serverCreated">O servidor {{ nomeServer }} foi criado!</p>
+
+<!--Pode se usar a String Interpolation e a Property Biding para escrever -->
+<!-- <p>{{ permiteNovoServer }}</p>
+<p [innerText]="permiteNovoServer"></p> -->
+
+
+
 <app-server></app-server>
 <app-server></app-server>
 <app-server></app-server>

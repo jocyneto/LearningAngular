@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { CompexercicioComponent } from './compexercicio/compexercicio.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({ 
   declarations: [
@@ -12,7 +13,7 @@ import { CompexercicioComponent } from './compexercicio/compexercicio.component'
     ,ServerComponent, ServersComponent, CompexercicioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

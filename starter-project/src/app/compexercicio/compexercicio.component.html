@@ -1,2 +1,24 @@
 <h4>Esse é um componente de exercicio</h4>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis enim sem, non dictum augue interdum ac. Etiam finibus arcu non luctus fringilla. Maecenas efficitur tristique ex, tincidunt convallis metus imperdiet non. Quisque facilisis, augue nec ultricies pharetra, mi ante posuere nibh, sit amet egestas erat eros eget arcu. Nunc eu sagittis ipsum. Quisque varius sagittis ligula, ut gravida felis vulputate commodo. Suspendisse potenti. Sed consequat fermentum massa, quis consequat lectus mattis a. Vestibulum faucibus elit a justo auctor, at suscipit erat pulvinar. Cras aliquet gravida velit vitae pretium. Aliquam sit amet turpis sapien. Suspendisse eu fringilla arcu. Nullam fringilla pharetra ultrices. Nam id lobortis diam, vel aliquet orci. Vestibulum elit eros, hendrerit at sagittis ac, feugiat ac enim.</p>
+
+<label>Diretório da imagem</label>
+
+<input type="text" 
+class="form-control"
+[(ngModel)]="nomeDiretorio">
+
+<button type="button" 
+class="btn btn-info"
+(click)="getNomeDiretorio()"
+[disabled]="nomeDiretorio.length <= 3">Pegar Diretório</button>
+
+<button type="button" 
+class="btn btn-info"
+(click)="resetNomeDiretorio()"
+[disabled]="nomeDiretorio === ''">Reset</button>
+
+<br><br>
+
+<img [src]="nomeDiretorio" >
+
+
