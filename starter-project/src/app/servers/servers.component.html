@@ -23,12 +23,22 @@ class="form-control"
 <p>{{ statusCreatedServer }}</p>
 <p *ngIf="serverCreated">O servidor {{ nomeServer }} foi criado!</p>
 
+
+<!-- ESSA SERIA OUTRA FORMA DE DECLARAÇÃO COM IF/ELSE, PORÉM NÃO É MUITO UTILIZADA:
+
+<p *ngIf="serverCreated; else noServer">O Servidor {{ nomeServer }} foi criado!</p>
+<ng-template #noServer>
+    <p>Nenhum Servidor foi criado.</p>
+</ng-template> -->
+
 <!--Pode se usar a String Interpolation e a Property Biding para escrever -->
 <!-- <p>{{ permiteNovoServer }}</p>
 <p [innerText]="permiteNovoServer"></p> -->
 
 
 
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let i of servers"></app-server>
+
+<!-- <app-server></app-server>
+<app-server></app-server> -->
+

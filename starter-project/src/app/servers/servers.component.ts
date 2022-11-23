@@ -23,6 +23,7 @@ export class ServersComponent implements OnInit {
   permiteNovoServer = false;
   nomeServer = `PC-NTX98230-RT`;
   serverCreated = false;
+  servers:string[] = [];
   
   constructor(){
     setTimeout(() => {
@@ -36,6 +37,7 @@ export class ServersComponent implements OnInit {
 
   onCreatedServer(){
     this.serverCreated = true;
+    this.servers.push(this.nomeServer);
     this.statusCreatedServer = `Server ${this.nomeServer} foi criado.`;
     console.log(`Server ${this.nomeServer} foi criado.`);
   }

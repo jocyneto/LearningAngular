@@ -1,1 +1,6 @@
-<p>The {{ 'Server' }} of ID {{ serverID }} is {{ getServerStatus() }}</p>
+<p>A quantidade de servidores online é de <b>{{ getQuantidadeTotalServerOnline() }}/{{ getQuantidadeTotalServer() }}</b></p>
+<p>A quantidade de servidores online é de <b>{{ getQuantidadeTotalServerOffline() }}/{{ getQuantidadeTotalServer() }}</b></p>
+<p
+[ngStyle]="{color: getColor()}"
+[ngClass]="{online: getServerStatus() === 'online'}">The {{ 'Server' }} of ID {{ serverID }} is {{ getServerStatus() }}
+</p>
