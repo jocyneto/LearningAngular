@@ -1,42 +1,54 @@
-# Instalar o angular
-'''
-    npm install -g @angular/cli
-'''
-OU
-'''
-    npm i -g @angular/cli
-'''
+# Comandos úteis:
 
-# Verificar se tem o angular instalado
-'''
-    angular -v
-'''
+    1. Instalar o angular
+        ```
+            npm install -g @angular/cli
+        ```
+        OU
+        ```
+            npm i -g @angular/cli
+        ```
 
-# Verificar versão do Angular após instalado
-'''
-    ng version
-'''
+    2. Verificar se tem o angular instalado
+        ```
+            angular -v
+        ```
 
-# Criando novo projeto
-'''
-    ng new nome_do_projeto
-'''
+    3. Verificar versão do Angular após instalado
+        ```
+            ng version
+        ```
 
-# Iniciando projeto
-1- Acessar diretório do projeto;
-2- Executar o comando:
-'''
-    ng serve
-'''
-3- Ele te dará o localhost de acesso, normalmente: http://localhost:4200/
+    4. Criando novo projeto
+        ```
+            ng new nome_do_projeto
+        ```
 
-Extra:
-- Ao executar o projeto ele já abre:
-'''
-    ng serve --open
-'''
+    5. Iniciando projeto
+        a) Acessar diretório do projeto;
+        b) Executar o comando:
+        ```
+            ng serve
+        ```
+        c) Ele te dará o localhost de acesso, normalmente: http://localhost:4200/
+        Extra:
+        - Ao executar o projeto ele já abre:
+        ```
+            ng serve --open
+        ```
 
-# Instalacao Bootstrap:
-npm install --save bootstrap@3
+    6. Instalacao Bootstrap:
+        npm install --save bootstrap@3
+        No arquivo angular.json na parte styles colocar esse caminho acima do style.css: "node_modules/bootstrap/dist/css/bootstrap.min.css"
+    
+    7. Criando componente automaticamente:
+     ```
+        ng generate component nome_component
+     ```
 
-No arquivo angular.json na parte styles colocar esse caminho acima do style.css: "node_modules/bootstrap/dist/css/bootstrap.min.css"
+    ```
+        ng g c nome_component
+    ```
+
+    8. Databiding
+    ![Esquema de comunicacao](.\imgs\databiding.png)
