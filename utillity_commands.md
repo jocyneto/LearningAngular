@@ -1,4 +1,4 @@
-# Comandos úteis:
+# Comandos úteis
 
     1. Instalar o angular
         ```
@@ -39,7 +39,8 @@
 
     6. Instalacao Bootstrap:
         npm install --save bootstrap@3
-        No arquivo angular.json na parte styles colocar esse caminho acima do style.css: "node_modules/bootstrap/dist/css/bootstrap.min.css"
+        No arquivo angular.json no array **styles** colocar esse caminho dentro do arraystyle.css:**"node_modules/bootstrap/dist/css/bootstrap.min.css"**
+        (Ficará do caminho acima que já tem de padrão)
     
     7. Criando componente automaticamente:
      ```
