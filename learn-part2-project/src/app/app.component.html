@@ -1,0 +1,19 @@
+<div class="container">
+  <app-cockpit
+  (serverCreated)="onServerAdded($event)"
+  (blueprintCreated)="onBlueprintAdded($event)"></app-cockpit>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server-element 
+        *ngFor="let serveObj of serverElements"
+        [aliasGetElement]="serveObj">
+        <!-- Para jogar com pedaço de código HTML dentro da tag do content é necessário adicionar a tag '<ng-content></ng-content>' no local onde deseja mostrar aquele conteúdo, deixando código mais facil de ler -->
+        <p>
+          <strong *ngIf="serveObj.type === 'server'" style="color: red">{{ serveObj.content }}</strong>
+          <em *ngIf="serveObj.type === 'blueprint'">{{ serveObj.content }}</em>
+        </p>
+      </app-server-element>
+    </div>
+  </div>
+</div>

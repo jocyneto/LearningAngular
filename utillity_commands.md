@@ -1,9 +1,7 @@
 # Comandos úteis
 
     1. Instalar o angular
-        ```
-            npm install -g @angular/cli
-        ```
+       
         OU
         ```
             npm i -g @angular/cli
@@ -49,6 +47,14 @@
 
     ```
         ng g c nome_component
+    ```
+    7.1 Sem arquivos de testes
+    ``` Para angular > 8
+        ng g c --skip-tests=true nome_componente
+    ```
+
+    ``` Para angular < 8
+        ng g c nome_componente --spec false
     ```
 
     8. Databiding
