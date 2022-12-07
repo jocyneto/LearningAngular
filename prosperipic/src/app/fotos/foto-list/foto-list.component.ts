@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Foto } from '../foto/foto';
 import { FotoService } from '../foto/foto.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class FotoListComponent implements OnInit {
     {url: 'https://webcachorros.com.br/wp-content/uploads/2013/12/WhatsApp-Image-2020-09-22-at-17.35.30.jpeg', descricao: 'Labrador besta'}
   ]
 
-  listaFotosAPI: any[] = []
+  listaFotosAPI: Foto[] = []
 
 
   constructor(private fotoService: FotoService, private activatedRoute: ActivatedRoute){

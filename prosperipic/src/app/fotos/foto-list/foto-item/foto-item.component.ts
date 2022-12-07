@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Foto } from '../../foto/foto';
 
 @Component({
   selector: 'app-foto-item',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./foto-item.component.css']
 })
 export class FotoItemComponent {
+  @Input() fotos: Foto[] = []
 
+  constructor(){}
 }
