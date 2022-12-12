@@ -1,27 +1,58 @@
-  <!-- Chama Default -->
-  <app-foto></app-foto>
+<p
+  class="text-center text-muted text-uppercase"
+  *ngIf="fotos.length == 0">Não achei fotos :(
+</p>
+<div class="container">
+  <ol class="list-unstyled">
+    <li
+      *ngFor="let cols of rows"
+      class="row">
 
-  <!-- Passando e sobreescrevendo com strings as propriedades que foram expostar com o @Input() -->
-  <app-foto
-    url="https://www.petz.com.br/blog/wp-content/uploads/2015/06/shutterstock_126021596.jpg"
-    descricao="Labradores">
-  </app-foto>
+        <div
+        class="col-md-4 col-xs-12"
+        *ngFor="let foto of cols">
 
-  <app-foto
-    url="https://static1.patasdacasa.com.br/articles/0/87/0/@/23155-cachorro-labrador-filhote-pode-ter-tres-articles_media_slider_mobile-1.jpg"
-    descricao="Labradores filhotes">
-  </app-foto>
+          <app-foto
+            [url]="foto.url"
+            [descricao]="foto.description">
+          </app-foto>
 
-  <!-- Lista de fotos internas -->
-  <!-- <app-foto
-    *ngFor="let item of listaFotos"
-    [url]="item.url"
-    [descricao]="item.descricao">
-  </app-foto> -->
+        </div>
 
-  <!-- Lista de fotos via API -->
-  <app-foto
-    *ngFor="let fotoAPI of fotos"
-    [url]="fotoAPI.url"
-    [descricao]="fotoAPI.description">
-  </app-foto>
+    </li>
+  </ol>
+</div>
+
+
+
+
+
+
+
+<!-- Lista de fotos via API -->
+<!-- <app-foto
+  *ngFor="let fotoAPI of fotos"
+  [url]="fotoAPI.url"
+  [descricao]="fotoAPI.description">
+</app-foto> -->
+
+<!-- Chamada Default -->
+<!-- <app-foto></app-foto> -->
+
+<!-- Passando e sobreescrevendo com strings as propriedades que foram expostar com o @Input() -->
+<!-- <app-foto
+  url="https://www.petz.com.br/blog/wp-content/uploads/2015/06/shutterstock_126021596.jpg"
+  descricao="Labradores">
+</app-foto>
+
+<app-foto
+  url="https://static1.patasdacasa.com.br/articles/0/87/0/@/23155-cachorro-labrador-filhote-pode-ter-tres-articles_media_slider_mobile-1.jpg"
+  descricao="Labradores filhotes">
+</app-foto> -->
+
+<!-- Lista de fotos internas -->
+<!-- <app-foto
+  *ngFor="let item of listaFotos"
+  [url]="item.url"
+  [descricao]="item.descricao">
+</app-foto> -->

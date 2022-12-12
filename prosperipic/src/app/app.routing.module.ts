@@ -1,3 +1,4 @@
+import { FotoListResolver } from './fotos/foto-list/foto-list.resolver';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -9,7 +10,7 @@ import { MainContentComponent } from './mains/main-content/main-content.componen
 // Aqui vai ficar qual componente que será acessado quando passar a requisição pelo link da web;
 // Antes de acessar o back-end o Angular vai 'se jogar na frente' e perguntar se é uma rota configurada;
 const routes: Routes = [
-  { path:'user/:usernameX', component: FotoListComponent},
+  { path:'user/:usernameX', component: FotoListComponent, resolve:{fotoCarregadas: FotoListResolver}},
   { path:'p/add', component: FotoFormComponent},
   { path:'', component: MainContentComponent},
   { path: '**', component: NotFoundComponent}
