@@ -1,0 +1,17 @@
+<div class="text-center mt-3 mb-10" >
+    <form>
+        <i aria-hidden="true" class="fa fa-search"></i>
+        <input
+        class="rounded"
+        type="search"
+        placeholder="Procurar..."
+        autofocus
+        [value]="value"
+        (keyup)="debounce.next($any($event.target).value)">
+        <!-- Metodo alternativo 01: 'propriedade_que_vai_receber = $any($event.target).value' -->
+        <!-- Metodo alternativo 02: (keyup)="filtroTexto = $event.target.value" (OBS: É possível que não funcione nas versões mais novas)-->
+        <!-- Metodo alternativo 03: Criar metodo e chamar: (keyup)="onUpdateFiltroTexto($event)-->
+        <!-- Também serveria o event biding (input)-->
+
+    </form>
+</div>

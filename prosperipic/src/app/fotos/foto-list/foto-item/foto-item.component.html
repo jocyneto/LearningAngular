@@ -1,29 +1,35 @@
-<p
-  class="text-center text-muted text-uppercase"
+<p class="text-center text-muted text-uppercase"
   *ngIf="fotos.length == 0">Não achei fotos :(
 </p>
+
 <div class="container">
+
   <ol class="list-unstyled">
-    <li
-      *ngFor="let cols of rows"
-      class="row">
+    <li class="row-no-gutters"
+    *ngFor="let cols of rows">
+        <app-card title="">
+          <div class="col-md-4 col-xs-12"
+          *ngFor="let foto of cols"
+          appDarkenOnHover>
 
-        <div
-        class="col-md-4 col-xs-12"
-        *ngFor="let foto of cols">
+            <app-foto
+              [url]="foto.url"
+              [descricao]="foto.description">
 
-          <app-foto
-            [url]="foto.url"
-            [descricao]="foto.description">
-          </app-foto>
+              <div class="text-center p-1">
+                <i aria-hidden="true" class="fa fa-heart-o fa-2x mr-2"></i>{{ foto.likes }}
+                <i aria-hidden="true" class="fa fa-comment-o fa-2x mr-2 ml-2"></i>{{ foto.comments }}
+              </div>
+              <br>
+              <br>
+            </app-foto>
 
-        </div>
-
+          </div>
+        </app-card>
     </li>
   </ol>
+
 </div>
-
-
 
 
 
