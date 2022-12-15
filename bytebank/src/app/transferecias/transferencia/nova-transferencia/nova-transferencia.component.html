@@ -1,0 +1,19 @@
+<div class="container" style="margin-top: 20%; border-style: solid;">
+    <form class="form-horizontal" (ngSubmit)="transferir()" style="margin: 20px;">
+        <h2>Nova Transferencia</h2>
+        <div class="form-group">
+            <!-- Formulario do valor -->
+            <label for="inputvalor" class="col-sm-2">Valor</label>
+            <input type="number" name="valor" id="inputvalor" class="form-control"
+                placeholder="Valor transferencia: R$ {{ valor }}"
+                [(ngModel)]="valor">
+
+            <!-- Formulario do destino -->
+            <label for="inputdestino" class="col-sm-2">Destino</label>
+            <input type="text" name="destino" id="inputdestino" class="form-control"
+                placeholder="Conta destino: Nº {{ destino }}"
+                [(ngModel)]="destino">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

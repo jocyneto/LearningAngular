@@ -1,0 +1,17 @@
+<br>
+<br>
+<div class="container" *ngIf="transferenciaEventList.length; else semConteudo" >
+  <h2 class="text-center">Histórico de transações</h2>
+  <div class="row" *ngFor="let transacao of transferenciaEventList" >
+    <div class="col-md-12">
+        <ul>
+          <li>Valor: {{transacao.valor | currency }} | Destino: {{transacao.destino}} | Data: {{transacao.data | date:'short'}}</li>
+          <hr>
+        </ul>
+    </div>
+  </div>
+</div>
+
+<ng-template #semConteudo>
+  <p class="center-text">Não há transferencias registradas</p>
+</ng-template>
